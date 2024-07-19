@@ -26,8 +26,6 @@ class TestSmokeTest():
     self.driver.set_window_size(1509, 949)
     elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-logo img")
     assert len(elements) > 0
-    elements = self.driver.find_elements(By.CSS_SELECTOR, ".header-title > h1")
-    assert len(elements) > 0
     assert self.driver.find_element(By.CSS_SELECTOR, ".header-title > h1").text == "Teton Idaho"
     assert self.driver.find_element(By.CSS_SELECTOR, ".header-title > h2").text == "Chamber of Commerce"
     assert self.driver.title == "Teton Idaho CoC"
